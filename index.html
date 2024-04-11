@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>YUME</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo-wrapper">
+                    <a href="#" title="YUME"><img src="images/yume-logo.svg" alt="yume-logo"></a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-listing">
+                        <li><a href="#" title="About-Us">About Us</a></li>
+                        <li><a href="#" title="Contact-Us">Contact Us</a></li>
+                        <li><a href="#" title="MEDICAL-PROFESSIONALs" class="yellow-btn btn">MEDICAL PROFESSIONALS</a>
+                            <a href="#" title="PATIENT" class="yellow-btn btn">PATIENT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main-section">
+        <section class="banner-section">
+            <div class="banner-image">
+                <img src="images/background.jpg" alt="background">
+            </div>
+            <div class="container">
+            <div class="banner-content">                
+                    <h1>Find a Doctor
+                       <span> at your fingertips</span></h1>
+                       <div class="content-wrapper">
+                        <div class="dropdown-wrapper">
+                           <label for="symptoms"><img src="images/symptoms.svg" alt="symptoms"></label>
+                            <select class="custom-dropdown" name="symptoms" data-placeholder="Select Status" id="symptoms">
+                                <option value="Headache">Headache</option>
+                                <option value="Irritability">Irritability</option>
+                                <option value="Difficulty-concentrating">Difficulty concentrating</option>
+                            </select>   
+                        </div>                   
+                        <div class="dropdown-wrapper">
+                            <label for="specialty"><img src="images/first-aid-kit.svg" alt="first-aid-kit"></label>
+                            <select class="custom-dropdown" name="specialty" data-placeholder="Specialty">
+                                <option value="Family medicine">Family medicine</option>
+                                <option value="Dermatology">Dermatology</option>
+                                <option value="Emergency medicine">Emergency medicine</option>
+                                <option value="Anesthesiology">Anesthesiology</option>
+                            </select>  
+                        </div>                    
+                        <div class="dropdown-wrapper">
+                            <label for="gender"><img src="images/gender-symbols.svg" alt="gender-symbols"></label>
+                            <select class="custom-dropdown" name="gender" data-placeholder="Gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="other">other</option>
+                            </select>   
+                        </div>                   
+
+                       </div>
+
+                       <div class="content-wrapper">
+                        <div class="search-wrapper">
+                            <div class="ui-widget">
+                                <label for="tags">Tags: </label>
+                                <input id="tags">
+                              </div>
+                            </div>
+                        <div class="date-picker">
+                            <p>Date: <input type="text" id="datepicker"></p>
+                        </div>
+                       </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"> </script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
