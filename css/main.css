@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   font-size: 60px;
   color: #ffffff;
@@ -32,11 +36,39 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #28252C;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #28252C;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #28252C;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+}
+
 body {
   color: #827C8A;
   font-size: 14px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
+  color: #827C8A;
 }
 
 .yellow-btn {
@@ -49,6 +81,8 @@ body {
   color: #ffffff;
   transition: all 0.5s;
   display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .yellow-btn:hover {
@@ -66,13 +100,14 @@ body {
   padding: 0 50px;
 }
 
+input:focus-visible {
+  outline: none;
+}
+
 .select2-container {
   width: 100%;
   min-width: 230px;
-}
-
-.tempalte-dropdown .select2-container--default .select2-selection--single {
-  width: 182px;
+  font-size: 16px;
 }
 
 .select2-container--default .select2-selection--single {
@@ -89,6 +124,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0 50px 0 30px;
+  color: #000000;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
@@ -112,6 +148,134 @@ body {
   transform: rotate(180deg);
 }
 
+.select2-container--open .select2-dropdown--below {
+  margin-top: 20px;
+}
+
+.select2-container--open .select2-dropdown--above {
+  margin-top: -20px;
+}
+
+.select2-results__option {
+  padding: 10px 14px;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  padding: 8px 0;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #9327FF;
+  color: #ffffff;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #A7A1B0;
+}
+
+.select2-dropdown {
+  border: none;
+  border-radius: unset;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #A7A1B0;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #A7A1B0;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #A7A1B0;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #A7A1B0;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+.ui-datepicker-prev span {
+  background-image: url(../images/prev.png) !important;
+  background-position: 0px 0px !important;
+  background-size: cover;
+}
+
+.ui-datepicker-next span {
+  background-image: url(../images/next.png) !important;
+  background-position: 0px 0px !important;
+  background-size: cover;
+}
+
+.ui-widget.ui-widget-content {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid rgba(130, 124, 138, 0.25);
+  background-color: #ffffff;
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  border: 1px solid rgba(130, 124, 138, 0.25);
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.ui-datepicker th {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.ui-state-default {
+  border: 1px solid rgba(130, 124, 138, 0.25);
+  background: #ffffff !important;
+  font-weight: 400 !important;
+  color: #000000 !important;
+}
+
+.ui-state-default:hover {
+  background-color: #9327FF !important;
+  color: #ffffff !important;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid rgba(130, 124, 138, 0.25);
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+  border: 1px solid #9327FF;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  background: #9327FF;
+}
+
+.banner-form .form-outer-wrap .form-inner-wrap .form-control:focus-visible {
+  border-bottom: 1px solid #9327FF;
+}
+
 .site-header {
   padding: 30px 0;
   position: fixed;
@@ -128,10 +292,11 @@ body {
   display: flex;
 }
 .site-header .header-wrapper .nav-listing li a:not(.btn) {
-  padding: 14px 20px;
+  padding: 14px 25px;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .banner-section {
@@ -155,8 +320,8 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
-  transform: translateY(-30%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 .banner-section .container .banner-content {
   max-width: 780px;
@@ -175,11 +340,211 @@ body {
 }
 .banner-section .container .banner-content .content-wrapper .dropdown-wrapper {
   flex: 0 0 33.33%;
-  max-width: 100%;
+  max-width: 33.33%;
   position: relative;
+  padding: 0 8px;
+}
+.banner-section .container .banner-content .content-wrapper .dropdown-wrapper .dropdown-wrapper {
+  padding: 0;
+}
+.banner-section .container .banner-content .content-wrapper .dropdown-wrapper:not(:last-child) {
+  border-right: 2px solid rgba(130, 124, 138, 0.25);
 }
 .banner-section .container .banner-content .content-wrapper label {
   position: absolute;
   top: 1px;
   z-index: 2;
+}
+.banner-section .container .banner-content .content-wrapper .inner-wrapper {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 8px;
+  position: relative;
+}
+.banner-section .container .banner-content .content-wrapper .inner-wrapper input {
+  width: 100%;
+  height: 22px;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: #000000;
+}
+.banner-section .container .banner-content .content-wrapper .inner-wrapper:not(:last-child) {
+  border-right: 2px solid rgba(130, 124, 138, 0.25);
+  border-radius: 2px;
+}
+.banner-section .container button {
+  font-family: "Rubik", sans-serif;
+}
+
+.easy-steps-section {
+  padding: 80px 0;
+}
+.easy-steps-section .easy-step-wrapper {
+  display: flex;
+  margin: 0 -20px;
+}
+.easy-steps-section .easy-step-wrapper .inner-wrapper {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 20px;
+  text-align: center;
+}
+.easy-steps-section .easy-step-wrapper .inner-wrapper .image-block {
+  margin-bottom: 39px;
+}
+.easy-steps-section .easy-step-wrapper .inner-wrapper p {
+  font-size: 16px;
+}
+.easy-steps-section .easy-step-wrapper .inner-wrapper span {
+  display: block;
+}
+
+.meet-our-doctors-section {
+  padding: 80px 0;
+  background-color: #FFF5FB;
+}
+.meet-our-doctors-section .heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+.meet-our-doctors-section .heading h2 {
+  margin: 0;
+}
+.meet-our-doctors-section .heading .yellow-btn {
+  font-weight: 400;
+}
+.meet-our-doctors-section .doctors-content {
+  display: flex;
+  margin: 0 -30px;
+  flex-wrap: wrap;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content {
+  padding: 0 30px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  height: 100%;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content {
+  background-color: #ffffff;
+  padding: 30px 30px 10px 30px;
+  border: 1px solid rgba(40, 37, 44, 0.08);
+  border-radius: 8px;
+  position: relative;
+  height: 100%;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content .image-block {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 68%;
+  border-radius: 5px;
+  max-width: 120px;
+  overflow: hidden;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content .image-block img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content span {
+  color: #9327FF;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content p {
+  font-size: 14px;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content em {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: #00D193;
+  padding: 6px 8px;
+  border-radius: 3px 0 0 3px;
+  font-style: normal;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content em img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.meet-our-doctors-section .doctors-content .doctors-outer-content .doctors-inner-content em span {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.top-searched-specialties-section {
+  padding: 80px 0;
+}
+.top-searched-specialties-section .specialties-wrapper {
+  display: flex;
+  margin: 0 -15px;
+}
+.top-searched-specialties-section .specialties-wrapper .specialties-outer-wrapper {
+  flex: 0 0 16.66%;
+  max-width: 16.66%;
+  padding: 0 15px;
+}
+.top-searched-specialties-section .specialties-wrapper .specialties-outer-wrapper .specialties-inner-wrapper {
+  border: 1px solid rgb(238, 238, 238);
+  padding: 20px 13px;
+  text-align: center;
+  height: 100%;
+}
+.top-searched-specialties-section .specialties-wrapper .specialties-outer-wrapper .specialties-inner-wrapper .image-block {
+  margin-bottom: 20px;
+}
+.top-searched-specialties-section .specialties-wrapper .specialties-outer-wrapper .specialties-inner-wrapper span {
+  color: #28252C;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.change-your-life-section .change-your-life-wrapper {
+  background: url(../images/background-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.change-your-life-section .change-your-life-wrapper .heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.change-your-life-section .change-your-life-wrapper .heading h2 {
+  margin: 0;
+  font-size: 48px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.change-your-life-section .change-your-life-wrapper .heading h2 span {
+  display: block;
+}
+.change-your-life-section .change-your-life-wrapper .heading .yellow-btn {
+  padding: 17px 40px;
+  max-height: 56px;
+}
+.change-your-life-section .change-your-life-wrapper .heading span {
+  margin-right: 6px;
+}
+
+.video-content-section {
+  padding: 80px 0;
+}
+.video-content-section .heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.video-content-section .heading h2 {
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

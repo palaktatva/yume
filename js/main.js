@@ -1,26 +1,27 @@
 jQuery(document).ready(function(){
 
+
   jQuery('.custom-dropdown').select2({
     minimumResultsForSearch: Infinity, 
     placeholder: function(){
-      $(this).data('data-placeholder');      
+      jQuery(this).data('data-placeholder');      
   } 
   });
 
+  $( function() {
+    $( "#datepicker").datepicker();
+  } );
 
   $( function() {
     var availableTags = [
-      "Surat",
-      "Amreli",
       "Ahemdabad",
-      "Vadodara"
+      "Surat",
+      "Jamnagar",
+      "Vadodra",
+      "Rajkot",
     ];
     $( "#tags" ).autocomplete({
       source: availableTags
     });
-  } );
-
-  $( function() {
-    $( "#datepicker" ).datepicker();
   } );
 });
