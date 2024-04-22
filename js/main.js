@@ -11,7 +11,15 @@ jQuery("body").addClass("sticky_header");
 
 
 jQuery(document).ready(function(){
+
+  // hamburger-icon js
+
+  jQuery(".hamburger-icon").click(function(){
+       jQuery("html,body").toggleClass("open-menu");
+  });
+
   sticky_header();
+
   jQuery('.custom-dropdown').select2({
     minimumResultsForSearch: Infinity, 
     placeholder: function(){
@@ -40,17 +48,15 @@ jQuery( function() {
 jQuery('.play-btn').click(function () {
   jQuery("body,html").addClass('modal-open');
     var _this = jQuery(this).attr('data-link');
-
     var _currentModal = jQuery(".custom-modal[data-target='" + _this + "']");
     _currentModal.addClass("visible");
-
     setTimeout(function () {
         _currentModal.addClass("fadein");
     }, 125);
-
     jQuery(this).closest("body").find("video").attr('controls', true).get(0).play();
 });
-jQuery('.custom-modal, .modal-close').click(function () {
+
+jQuery('.custom-modal').click(function () {
   jQuery("body,html").removeClass('modal-open');
     var _this = jQuery(this)
   jQuery(this).closest(".custom-modal").removeClass("fadein");
