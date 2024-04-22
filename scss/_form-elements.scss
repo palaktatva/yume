@@ -49,6 +49,9 @@
     @include bp(sm-max){
         width: 100% !important;
     }
+    @include bp(xs-max){
+        min-width: 180px;
+    }
 &.select2-container--default{
     .select2-results__option {
         padding: 10px 14px;
@@ -115,6 +118,11 @@
             width: 20px;
             top: 0;
             right: 5px;
+
+            @include bp(xxs-max){
+                width: 17px;
+                background-size: 17px 17px;
+            }
         }
         b {
             display: none;
@@ -206,3 +214,6 @@ outline: none;
     color: $white;
     border: 1px solid $secondary-color;
 }
+
+
+

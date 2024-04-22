@@ -76,6 +76,7 @@ h5{
     color: $white;
     text-transform: capitalize;
     line-height: 1.2;
+    padding-right: 20px;
     @include bp(lg-max) {
         font-size: 44px;
     }
@@ -92,6 +93,9 @@ h5{
     @include bp(xs-max) {
         font-size: 30px;
     }
+    @include bp(xxxs-max){
+        font-size: 28px;
+    }
 }
 
 h6{
@@ -104,6 +108,11 @@ h6{
     @include bp(sm-max) {
         font-size: 18px;
     }
+    @include bp(xs-max) {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+   
 }
 
 ::-webkit-input-placeholder {
@@ -111,6 +120,9 @@ h6{
     color: $placeholder-color;
     font-size: 16px;
     font-family: $primary-fonts;
+    @include bp(sm-max){
+        font-size: 14px;
+    }
 }
 
 ::-moz-placeholder {

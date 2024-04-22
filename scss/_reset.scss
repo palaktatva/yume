@@ -19,3 +19,13 @@ body {
     font-weight: 400;
     color: $fonts-color;
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+  }
+  
+  ::selection {
+    color: red;
+    background: yellow;
+  }
