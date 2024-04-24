@@ -71,77 +71,15 @@ h4{
     color: $heading-color;
     margin-bottom: 5px;
 }
-h5{
-    font-size: 48px;
-    color: $white;
-    text-transform: capitalize;
-    line-height: 1.2;
-    padding-right: 20px;
-    @include bp(lg-max) {
-        font-size: 44px;
-    }
-    @include bp(md-max) {
-        font-size: 40px;
-    }
-    @include bp(smd-max) {
-        font-size: 34px;
-    }
-    @include bp(sm-max) {
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
-    @include bp(xs-max) {
-        font-size: 30px;
-    }
-    @include bp(xxxs-max){
-        font-size: 28px;
-    }
-}
 
-h6{
-    font-size: 20px;
+
+h5{
+    font-size: 18px;
     font-weight: 600;
     color: $heading-color;
     margin-bottom: 15px;
 
-  
-    @include bp(sm-max) {
-        font-size: 18px;
-    }
-    @include bp(xs-max) {
-        font-size: 16px;
-        margin-bottom: 6px;
-    }
    
 }
 
-::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: $placeholder-color;
-    font-size: 16px;
-    font-family: $primary-fonts;
-    @include bp(sm-max){
-        font-size: 14px;
-    }
-}
 
-::-moz-placeholder {
-    /* Firefox 19+ */
-    color: $placeholder-color;
-    font-size: 16px;
-    font-family: $primary-fonts;
-}
-
-:-ms-input-placeholder {
-    /* IE 10+ */
-    color: $placeholder-color;
-    font-size: 16px;
-    font-family: $primary-fonts;
-}
-
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: $placeholder-color;
-    font-size: 16px;
-    font-family: $primary-fonts;
-}

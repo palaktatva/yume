@@ -1,29 +1,4 @@
-.sticky_header {
-    .site-header {
-        background-color: $secondary-color;
-    }
-}
 
-.open-menu {
-    .nav-listing {
-        transform: translate(0%) !important;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .cross-icon {
-        display: block !important;
-    }
-
-    body {
-        @include bp(xs-max) {
-            overflow: hidden;
-        }
-    }
-
-}
 
 .container {
     max-width: 1240px;
@@ -42,7 +17,10 @@
     top: 0;
     width: 100%;
     z-index: 99;
-
+.sticky_header &{
+    background-color: $secondary-color;
+    padding: 15px 0;
+}
     .header-wrapper {
         display: flex;
         justify-content: space-between;
@@ -73,13 +51,24 @@
             .cross-icon {
                 display: none;
                 width: 30px;
+
+                .open-menu &{
+                    display: block !important;
+                }
+            }
+            .menu-icon{
+                .open-menu &{
+                    display: none;
+                }
             }
         }
 
         .nav-listing {
             display: flex;
             align-items: center;
-
+            .open-menu &{
+                transform: translate(0%) !important;
+            }
             @include bp(lg-max) {
                 transform: translate(110%);
                 position: fixed;
@@ -87,8 +76,8 @@
                 top: 0;
                 transition: $transition;
                 width: 350px;
-                background-color: $secondary-color;
-                padding-top: 20px;
+                background-color: rgba(237, 186, 54, 0.9);
+                padding-top: 80px;
                 display: block;
                 bottom: 0;
 
@@ -100,7 +89,7 @@
 
             li {
                 @include bp(lg-max) {
-                    padding: 20px;
+                    padding: 10px 20px;
                 }
 
                 a:not(.btn) {
@@ -117,6 +106,9 @@
 
                     &:hover {
                         color: $primary-color;
+                    }
+                    .open-menu &:hover{
+                        color: $secondary-color;
                     }
                 }
 
@@ -187,8 +179,9 @@
 
                 @include bp(sm-max) {
                     flex-wrap: wrap;
-                    padding: 15px 0;
-                    margin-bottom: 15px;
+                    padding: 0;
+                    margin-bottom: 12px;
+                    background-color: transparent;
                 }
 
                 .dropdown-wrapper {
@@ -196,11 +189,17 @@
                     max-width: 33.33%;
                     position: relative;
                     padding: 0 14px;
-
+                    @include bp(sm-max){
+                        padding: 0;
+                    }
                     &:last-child {
                         .select2-container .select2-selection--single .select2-selection__rendered {
                             padding-left: 35px;
+                            @include bp(sm-max){
+                                padding-left: 55px;
+                            }
                         }
+
                     }
 
                     .dropdown-wrapper {
@@ -234,6 +233,7 @@
 
                     @include bp(sm-max) {
                         top: 5px;
+                        left: 17px;
                     }
                 }
 
@@ -246,11 +246,15 @@
                     @include bp(sm-max) {
                         flex: 0 0 100%;
                         max-width: 100%;
+                        padding: 0;
                     }
 
                     &:last-child {
                         input {
                             padding-left: 30px;
+                            @include bp(sm-max){
+                            padding-left: 55px;
+                            }
                         }
                     }
 
@@ -266,7 +270,8 @@
 
 
                         @include bp(sm-max) {
-                            height: 30px;
+                            height: 35px;
+                            padding-left: 55px;
                         }
 
                         &:focus-visible {
@@ -457,6 +462,7 @@
                 border-radius: 8px;
                 position: relative;
                 height: 100%;
+                cursor: pointer;
 
                 @include bp(lg-max) {
                     padding: 15px;
@@ -601,6 +607,7 @@
 }
 
 .change-your-life-section {
+
     .change-your-life-wrapper {
         background: url(../images/background-1.jpg);
         background-repeat: no-repeat;
@@ -614,9 +621,35 @@
             justify-content: space-between;
             flex-wrap: wrap;
             align-items: center;
-            padding: 80px 40px;
+            padding: 73px 40px;
             max-width: 1060px;
             margin: 0 auto;
+
+            h2{
+                font-size: 48px;
+                color: $white;
+                line-height: 1.2;
+                padding-right: 20px;
+                @include bp(lg-max) {
+                    font-size: 44px;
+                }
+                @include bp(md-max) {
+                    font-size: 40px;
+                }
+                @include bp(smd-max) {
+                    font-size: 34px;
+                }
+                @include bp(sm-max) {
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                }
+                @include bp(xs-max) {
+                    font-size: 30px;
+                }
+                @include bp(xxxs-max){
+                    font-size: 28px;
+                }
+            }
 
             @include bp(lg-max) {
                 padding: 60px 20px;
@@ -752,7 +785,16 @@
         }
 
         .video-content-inner-wrapper {
-
+          h5{
+            font-size: 20px;
+            @include bp(sm-max) {
+                font-size: 18px;
+            }
+            @include bp(xs-max) {
+                font-size: 16px;
+                margin-bottom: 6px;
+            }
+          }
             .video-content {
                 position: relative;
                 padding-bottom: 43.5%;
@@ -799,6 +841,13 @@
                 color: $heading-color;
                 max-width: 1012px;
                 line-height: 1.6;
+            }
+          
+            .moreless-btn{
+                display: inline-block;
+                margin-top: 10px;
+                color: $secondary-color;
+                font-size: 16px
             }
         }
     }

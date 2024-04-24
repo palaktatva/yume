@@ -18,14 +18,18 @@ body {
     font-family: $primary-fonts;
     font-weight: 400;
     color: $fonts-color;
+
+    .open-menu &{
+            overflow: hidden;
+    }
 }
 
 ::-moz-selection { /* Code for Firefox */
-    color: red;
-    background: yellow;
+    color: $white;
+    background: $primary-color;
   }
   
   ::selection {
-    color: red;
-    background: yellow;
+    color: $white;
+    background: $primary-color;
   }

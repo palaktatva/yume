@@ -10,21 +10,11 @@ jQuery("body").addClass("sticky_header");
     jQuery("body").removeClass("sticky_header");
   }
 }
-// reverse header function
-
-function reverse_header(){
-var scroll = jQuery(window).scrollTop();
-if(scroll > position){
-  jQuery("body").removeClass("nav-down").addClass("nav-up")
-}
-else{
-  jQuery("body").removeClass("nav-up").addClass("nav-down")
-}
-}
 
 
 jQuery(document).ready(function(){
   sticky_header();
+
 // hamburger-icon js
   jQuery(".hamburger-icon").click(function(){
        jQuery("html,body").toggleClass("open-menu");
@@ -40,12 +30,12 @@ jQuery(document).ready(function(){
   });
 
 //datepicker js
-jQuery( function() {
-  jQuery( "#datepicker").datepicker();
-  } );
+
+jQuery( ".datepicker").datepicker();
+
 
 // auto complete js
-jQuery( function() {
+
     var availableTags = [
       "Ahemdabad",
       "Surat",
@@ -56,7 +46,7 @@ jQuery( function() {
   jQuery( "#tags" ).autocomplete({
       source: availableTags
     });
-  } );
+
 
 // video js
 jQuery('.play-btn').click(function () {
@@ -67,7 +57,9 @@ jQuery('.play-btn').click(function () {
     setTimeout(function () {
         _currentModal.addClass("fadein");
     }, 125);
-    jQuery(this).closest("body").find("video").attr('controls', true).get(0).play();
+
+      _currentModal.find("video").attr('controls', true).get(0).play();
+   
 });
 // custom modal js
 jQuery('.custom-modal').click(function () {
@@ -77,17 +69,42 @@ jQuery('.custom-modal').click(function () {
     setTimeout(function () {
         _this.closest(".custom-modal").removeClass("visible");
     }, 125);
-    jQuery(this).closest("body").find("video").get(0).pause();
+
+    _this.closest(".custom-modal").find("video").get(0).pause();
 });
 jQuery(".custom-modal .modal-inner-content").click(function(e){
     e.stopPropagation();
 });
 
+function readmore(){
+  var showchar = 300 ;
+  jQuery(".read-more").each(function(){
+   if(jQuery(this).length)
+   return;
+  var allstr = jQuery(this).text();
+  if(allstr.length > showchar){
+    var firstSet = allstr.substring(0, showchar);
+  }
+
+  });
+}
+
+jQuery(".moreless-btn").click(function(e){
+  e.preventDefault();
+  if(jQuery(this).text() == "Read more")
+  {
+    $(this).text("Read less");
+  }
+  else{
+    $(this).text("Read more");
+  }
+
+});
 
 
 });
 
-jQuery(window).scroll(function(){
+jQuery(window).scroll(function(e){
   sticky_header();
   
 });
