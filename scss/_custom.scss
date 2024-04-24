@@ -1,5 +1,3 @@
-
-
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -9,7 +7,12 @@
         padding: 0 25px;
     }
 }
-
+.heading{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
 .site-header {
     padding: 30px 0;
     position: fixed;
@@ -17,10 +20,12 @@
     top: 0;
     width: 100%;
     z-index: 99;
-.sticky_header &{
-    background-color: $secondary-color;
-    padding: 15px 0;
-}
+
+    .sticky_header & {
+        background-color: $secondary-color;
+        padding: 15px 0;
+    }
+
     .header-wrapper {
         display: flex;
         justify-content: space-between;
@@ -52,12 +57,13 @@
                 display: none;
                 width: 30px;
 
-                .open-menu &{
+                .open-menu & {
                     display: block !important;
                 }
             }
-            .menu-icon{
-                .open-menu &{
+
+            .menu-icon {
+                .open-menu & {
                     display: none;
                 }
             }
@@ -66,9 +72,11 @@
         .nav-listing {
             display: flex;
             align-items: center;
-            .open-menu &{
+
+            .open-menu & {
                 transform: translate(0%) !important;
             }
+
             @include bp(lg-max) {
                 transform: translate(110%);
                 position: fixed;
@@ -107,7 +115,8 @@
                     &:hover {
                         color: $primary-color;
                     }
-                    .open-menu &:hover{
+
+                    .open-menu &:hover {
                         color: $secondary-color;
                     }
                 }
@@ -189,13 +198,16 @@
                     max-width: 33.33%;
                     position: relative;
                     padding: 0 14px;
-                    @include bp(sm-max){
+
+                    @include bp(sm-max) {
                         padding: 0;
                     }
+
                     &:last-child {
                         .select2-container .select2-selection--single .select2-selection__rendered {
                             padding-left: 35px;
-                            @include bp(sm-max){
+
+                            @include bp(sm-max) {
                                 padding-left: 55px;
                             }
                         }
@@ -232,7 +244,7 @@
                     z-index: 2;
 
                     @include bp(sm-max) {
-                        top: 5px;
+                        top: 9px;
                         left: 17px;
                     }
                 }
@@ -252,8 +264,9 @@
                     &:last-child {
                         input {
                             padding-left: 30px;
-                            @include bp(sm-max){
-                            padding-left: 55px;
+
+                            @include bp(sm-max) {
+                                padding-left: 55px;
                             }
                         }
                     }
@@ -270,7 +283,7 @@
 
 
                         @include bp(sm-max) {
-                            height: 35px;
+                            height: 40px;
                             padding-left: 55px;
                         }
 
@@ -290,16 +303,27 @@
                     }
                 }
 
-            }
-        }
+                .image-block {
+                    position: absolute;
+                    right: 16px;
+                    top: 1px;
 
-        button {
-            font-family: $primary-fonts;
-            min-height: 56px;
+                    @include bp(sm-max) {
+                        right: 20px;
+                        top: 10px;
+                    }
+                }
+            }
         }
     }
 
+    button {
+        font-family: $primary-fonts;
+        min-height: 56px;
+    }
 }
+
+
 
 .easy-steps-section {
     padding: 80px 0;
@@ -393,9 +417,6 @@
     }
 
     .heading {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         margin-bottom: 38px;
 
         @include bp (lg-max) {
@@ -617,36 +638,39 @@
 
 
         .heading {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
-            padding: 73px 40px;
+            padding: 80px 40px;
             max-width: 1060px;
             margin: 0 auto;
 
-            h2{
+            h2 {
                 font-size: 48px;
                 color: $white;
                 line-height: 1.2;
                 padding-right: 20px;
+                margin: 0;
+
                 @include bp(lg-max) {
                     font-size: 44px;
                 }
+
                 @include bp(md-max) {
                     font-size: 40px;
                 }
+
                 @include bp(smd-max) {
                     font-size: 34px;
                 }
+
                 @include bp(sm-max) {
                     font-size: 32px;
                     margin-bottom: 10px;
                 }
+
                 @include bp(xs-max) {
                     font-size: 30px;
                 }
-                @include bp(xxxs-max){
+
+                @include bp(xxxs-max) {
                     font-size: 28px;
                 }
             }
@@ -662,6 +686,7 @@
 
             span {
                 display: block;
+              
             }
 
 
@@ -697,10 +722,7 @@
     }
 
     .heading {
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 30px;
-        flex-wrap: wrap;
 
         @include bp(lg-max) {
             margin-bottom: 20px;
@@ -785,16 +807,19 @@
         }
 
         .video-content-inner-wrapper {
-          h5{
-            font-size: 20px;
-            @include bp(sm-max) {
-                font-size: 18px;
+            h5 {
+                font-size: 20px;
+
+                @include bp(sm-max) {
+                    font-size: 18px;
+                }
+
+                @include bp(xs-max) {
+                    font-size: 16px;
+                    margin-bottom: 6px;
+                }
             }
-            @include bp(xs-max) {
-                font-size: 16px;
-                margin-bottom: 6px;
-            }
-          }
+
             .video-content {
                 position: relative;
                 padding-bottom: 43.5%;
@@ -841,13 +866,29 @@
                 color: $heading-color;
                 max-width: 1012px;
                 line-height: 1.6;
+                height: 65px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;  
+
+                &.show-content {
+                    height: auto;
+                    display: inline-block;
+                }
             }
-          
-            .moreless-btn{
-                display: inline-block;
+
+            .moreless-btn {
+                display: block;
                 margin-top: 10px;
-                color: $secondary-color;
-                font-size: 16px
+                color: $primary-color;
+                font-size: 16px;
+                cursor: pointer;
+                transition: $transition;
+
+                &:hover {
+                    color: $secondary-color;
+                }
             }
         }
     }
@@ -1001,9 +1042,11 @@
         justify-content: space-between;
         text-align: center;
         padding: 24px 0;
-        @include bp (xxs-max){
+
+        @include bp (xxs-max) {
             justify-content: center;
         }
+
         p {
             color: $white;
         }
@@ -1095,13 +1138,24 @@
     }
 
     .modal-inner-content {
-        padding: 10px;
+        padding: 40px;
         background: #fff;
         position: relative;
         width: 100%;
 
         video {
             width: 100%;
+        }
+
+        span {
+            background: $primary-color;
+            height: 30px;
+            display: inline-block;
+            width: 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
         }
     }
 }

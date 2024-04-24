@@ -62,7 +62,7 @@ jQuery('.play-btn').click(function () {
    
 });
 // custom modal js
-jQuery('.custom-modal').click(function () {
+jQuery('.custom-modal,.close-btn').click(function () {
   jQuery("body,html").removeClass('modal-open');
     var _this = jQuery(this)
   jQuery(this).closest(".custom-modal").removeClass("fadein");
@@ -89,6 +89,7 @@ function readmore(){
   });
 }
 
+// read-more read-less jQuery
 jQuery(".moreless-btn").click(function(e){
   e.preventDefault();
   if(jQuery(this).text() == "Read more")
@@ -98,9 +99,11 @@ jQuery(".moreless-btn").click(function(e){
   else{
     $(this).text("Read more");
   }
+  
+  jQuery(this).closest(".video-content-inner-wrapper").find(".more-less").toggleClass("show-content");
 
 });
-
+AOS.init();
 
 });
 

@@ -201,7 +201,7 @@ h5 {
   min-width: 230px;
   font-size: 16px;
 }
-@media (max-width: 767px) {
+@media (max-width: 850px) {
   .select2-container {
     width: 100% !important;
   }
@@ -258,7 +258,7 @@ h5 {
 }
 @media (max-width: 767px) {
   .select2-container .select2-selection--single {
-    height: 35px;
+    height: 40px;
   }
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -315,6 +315,16 @@ h5 {
 .ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-header {
   background: #EDBA36;
 }
+.ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-header .ui-datepicker-prev span {
+  background-image: url(../images/prev.png) !important;
+  background-position: 0px 0px !important;
+  background-size: cover;
+}
+.ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-header .ui-datepicker-next span {
+  background-image: url(../images/next.png) !important;
+  background-position: 0px 0px !important;
+  background-size: cover;
+}
 .ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-title {
   font-size: 16px;
   color: rgb(255, 255, 255);
@@ -337,18 +347,6 @@ h5 {
 }
 .ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-calendar tr td .ui-state-default.ui-state-active {
   border: 1px solid #EDBA36;
-}
-
-.ui-datepicker-prev span {
-  background-image: url(../images/prev.png) !important;
-  background-position: 0px 0px !important;
-  background-size: cover;
-}
-
-.ui-datepicker-next span {
-  background-image: url(../images/next.png) !important;
-  background-position: 0px 0px !important;
-  background-size: cover;
 }
 
 .ui-menu.ui-widget.ui-widget-content {
@@ -417,6 +415,13 @@ h5 {
   .container {
     padding: 0 25px;
   }
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .site-header {
@@ -632,7 +637,7 @@ h5 {
 }
 @media (max-width: 767px) {
   .banner-section .container .banner-content .content-wrapper label {
-    top: 5px;
+    top: 9px;
     left: 17px;
   }
 }
@@ -669,7 +674,7 @@ h5 {
 }
 @media (max-width: 767px) {
   .banner-section .container .banner-content .content-wrapper .inner-wrapper input {
-    height: 35px;
+    height: 40px;
     padding-left: 55px;
   }
 }
@@ -686,7 +691,18 @@ h5 {
     margin-bottom: 10px;
   }
 }
-.banner-section .container button {
+.banner-section .container .banner-content .content-wrapper .image-block {
+  position: absolute;
+  right: 16px;
+  top: 1px;
+}
+@media (max-width: 767px) {
+  .banner-section .container .banner-content .content-wrapper .image-block {
+    right: 20px;
+    top: 10px;
+  }
+}
+.banner-section button {
   font-family: "Rubik", sans-serif;
   min-height: 56px;
 }
@@ -787,9 +803,6 @@ h5 {
   }
 }
 .meet-our-doctors-section .heading {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin-bottom: 38px;
 }
 @media (max-width: 1199px) {
@@ -1000,11 +1013,7 @@ h5 {
   border-radius: 8px;
 }
 .change-your-life-section .change-your-life-wrapper .heading {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 73px 40px;
+  padding: 80px 40px;
   max-width: 1060px;
   margin: 0 auto;
 }
@@ -1013,6 +1022,7 @@ h5 {
   color: rgb(255, 255, 255);
   line-height: 1.2;
   padding-right: 20px;
+  margin: 0;
 }
 @media (max-width: 1199px) {
   .change-your-life-section .change-your-life-wrapper .heading h2 {
@@ -1090,10 +1100,7 @@ h5 {
   }
 }
 .video-content-section .heading {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 30px;
-  flex-wrap: wrap;
 }
 @media (max-width: 1199px) {
   .video-content-section .heading {
@@ -1229,12 +1236,26 @@ h5 {
   color: #28252C;
   max-width: 1012px;
   line-height: 1.6;
+  height: 65px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.video-content-section .video-content-wrapper .video-content-inner-wrapper p.show-content {
+  height: auto;
+  display: inline-block;
 }
 .video-content-section .video-content-wrapper .video-content-inner-wrapper .moreless-btn {
-  display: inline-block;
+  display: block;
   margin-top: 10px;
-  color: #9327ff;
+  color: #EDBA36;
   font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.video-content-section .video-content-wrapper .video-content-inner-wrapper .moreless-btn:hover {
+  color: #9327ff;
 }
 
 .site-footer {
@@ -1463,11 +1484,21 @@ h5 {
   padding: 0 30px;
 }
 .custom-modal .modal-inner-content {
-  padding: 10px;
+  padding: 40px;
   background: #fff;
   position: relative;
   width: 100%;
 }
 .custom-modal .modal-inner-content video {
   width: 100%;
+}
+.custom-modal .modal-inner-content span {
+  background: #EDBA36;
+  height: 30px;
+  display: inline-block;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

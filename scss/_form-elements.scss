@@ -52,7 +52,7 @@
 .select2-container {
     min-width: 230px;
     font-size: 16px;
-    @include bp(sm-max){
+    @include bp(ssm-max){
         width: 100% !important;
     }
     @include bp(xs-max){
@@ -107,7 +107,7 @@
         border: unset;
 
         @include bp(sm-max){
-            height: 35px;
+            height: 40px;
         }
         .select2-selection__rendered {
             width: 100%;
@@ -161,6 +161,17 @@
 
     .ui-datepicker-header {
         background: $primary-color;
+
+        .ui-datepicker-prev span {
+            background-image: url(../images/prev.png) !important;
+            background-position: 0px 0px !important;
+            background-size: cover;
+        }
+        .ui-datepicker-next span {
+            background-image: url(../images/next.png) !important;
+            background-position: 0px 0px !important;
+            background-size: cover;
+        }
     }
     .ui-datepicker-title {
         font-size: 16px;
@@ -196,17 +207,9 @@
     
 }
 
-.ui-datepicker-prev span {
-    background-image: url(../images/prev.png) !important;
-    background-position: 0px 0px !important;
-    background-size: cover;
-}
 
-.ui-datepicker-next span {
-    background-image: url(../images/next.png) !important;
-    background-position: 0px 0px !important;
-    background-size: cover;
-}
+
+
 
 .ui-menu.ui-widget.ui-widget-content{
     font-family: $primary-fonts;
@@ -221,9 +224,6 @@
 }
 }
 
-// .ui-menu-item:hover{
-    
-// }
 .ui-state-active{
     background-color: $primary-color !important;
     color: $white;
@@ -268,5 +268,3 @@
     font-family: $primary-fonts;
     opacity: 1 !important;
 }
-
-
