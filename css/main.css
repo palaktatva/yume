@@ -198,7 +198,7 @@ h5 {
 }
 
 .select2-container {
-  min-width: 230px;
+  width: 100% !important;
   font-size: 16px;
 }
 @media (max-width: 850px) {
@@ -1023,6 +1023,7 @@ h5 {
   line-height: 1.2;
   padding-right: 20px;
   margin: 0;
+  text-transform: capitalize;
 }
 @media (max-width: 1199px) {
   .change-your-life-section .change-your-life-wrapper .heading h2 {
@@ -1402,7 +1403,7 @@ h5 {
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
-  padding: 24px 0;
+  padding: 24px 0 20px;
 }
 @media (max-width: 479px) {
   .site-footer .footer-bottom-wrapper {
@@ -1489,6 +1490,11 @@ h5 {
   position: relative;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .custom-modal .modal-inner-content {
+    padding: 20px;
+  }
+}
 .custom-modal .modal-inner-content video {
   width: 100%;
 }
@@ -1501,4 +1507,15 @@ h5 {
   top: 0;
   right: 0;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .custom-modal .modal-inner-content span {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .custom-modal .modal-inner-content span img {
+    width: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
