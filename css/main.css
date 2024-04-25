@@ -175,7 +175,7 @@ h5 {
   }
 }
 .yellow-btn.bg-btn {
-  padding: 0 40px;
+  width: 100%;
 }
 @media (max-width: 575px) {
   .yellow-btn {
@@ -232,12 +232,22 @@ h5 {
   padding: 8px 0;
 }
 .select2-container.select2-container--default .select2-results__option[aria-selected=true] {
-  background-color: rgb(255, 255, 255);
-  color: #827C8A;
+  background-color: #EDBA36;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 767px) {
+  .select2-container.select2-container--default .select2-selection--single {
+    border-radius: 6px !important;
+  }
 }
 .select2-container.select2-container--open .select2-dropdown {
   border: none;
   border-radius: unset;
+}
+@media (max-width: 767px) {
+  .select2-container.select2-container--open .select2-dropdown {
+    border-radius: 6px;
+  }
 }
 .select2-container.select2-container--open .select2-selection__arrow {
   transform: rotate(180deg);
@@ -271,7 +281,7 @@ h5 {
 }
 @media (max-width: 767px) {
   .select2-container .select2-selection--single {
-    height: 40px;
+    height: 46px;
   }
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -370,6 +380,11 @@ h5 {
   margin-top: 20px;
   color: #827C8A;
 }
+@media (max-width: 767px) {
+  .ui-menu.ui-widget.ui-widget-content {
+    border-radius: 6px;
+  }
+}
 .ui-menu.ui-widget.ui-widget-content .ui-menu-item-wrapper {
   padding: 6px 25px;
 }
@@ -458,7 +473,7 @@ h5 {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 1200;
   transition: all 0.5s;
 }
 .sticky_header .site-header {
@@ -612,7 +627,6 @@ h5 {
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
   align-items: center;
-  padding: 0 10px;
   min-height: 56px;
   margin-bottom: 20px;
 }
@@ -710,8 +724,9 @@ h5 {
 }
 @media (max-width: 767px) {
   .banner-section .container .banner-content .content-wrapper .inner-wrapper input {
-    height: 40px;
+    height: 46px;
     padding-left: 55px;
+    border-radius: 6px;
   }
 }
 .banner-section .container .banner-content .content-wrapper .inner-wrapper input:focus-visible {
@@ -1419,10 +1434,14 @@ h5 {
 .site-footer .footer-bottom-wrapper p {
   color: rgb(255, 255, 255);
 }
+.site-footer .footer-bottom-wrapper .content-wrap {
+  margin: 0 -5px;
+}
 .site-footer .footer-bottom-wrapper .content-wrap a {
   color: rgb(255, 255, 255);
   transition: all 0.5s;
   position: relative;
+  padding: 0 5px;
 }
 .site-footer .footer-bottom-wrapper .content-wrap a:hover {
   text-decoration: underline;
@@ -1433,7 +1452,7 @@ h5 {
   width: 2px;
   background-color: rgb(255, 255, 255);
   position: absolute;
-  margin-left: 1px;
+  right: -4px;
 }
 
 .modal-open {
@@ -1530,6 +1549,8 @@ h5 {
   .custom-modal .modal-inner-content span {
     height: 20px;
     width: 20px;
+    padding: 3px;
+    top: -25px;
   }
 }
 @media (max-width: 767px) {

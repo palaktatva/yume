@@ -1,9 +1,10 @@
 var position = jQuery(window).scrollTop();
 //sticky header function
+
+
 function sticky_header(){
-  var header_length = jQuery(".site-header").innerHeight();
- 
-  if(jQuery(window).scrollTop() > header_length){
+  var scroll = jQuery(window).scrollTop();
+  if(scroll > 0){
 jQuery("body").addClass("sticky_header");
   }
   else{
@@ -18,7 +19,9 @@ jQuery(document).ready(function(){
 // hamburger-icon js
   jQuery(".hamburger-icon").click(function(){
        jQuery("html,body").toggleClass("open-menu");
+       jQuery(".open-menu").children(".site-header").find(".btn").addClass("bg-btn");
   });
+  
 
 
 // select2 js
@@ -92,7 +95,11 @@ jQuery(".moreless-btn").click(function(e){
   jQuery(this).closest(".video-content-inner-wrapper").find(".more-less").toggleClass("show-content");
 
 });
-AOS.init();
+AOS.init(
+  // {
+  //   once:true
+  // }
+);
 
 });
 
