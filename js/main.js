@@ -76,18 +76,7 @@ jQuery(".custom-modal .modal-inner-content").click(function(e){
     e.stopPropagation();
 });
 
-function readmore(){
-  var showchar = 300 ;
-  jQuery(".read-more").each(function(){
-   if(jQuery(this).length)
-   return;
-  var allstr = jQuery(this).text();
-  if(allstr.length > showchar){
-    var firstSet = allstr.substring(0, showchar);
-  }
 
-  });
-}
 
 // read-more read-less jQuery
 jQuery(".moreless-btn").click(function(e){

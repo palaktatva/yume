@@ -2,9 +2,11 @@
     background-color: $primary-color;
     border: 1px solid $primary-color;
     border-radius: 8px;
-    padding: 14px 30px;
+    padding: 0 30px;
+    min-height: 48px;
     font-weight: 500;
     font-size: 16px;
+    font-family: "Rubik", sans-serif;
     color: $white;
     transition: all 0.5s;
     display: inline-flex;
@@ -12,19 +14,25 @@
     justify-content: center;
     text-transform: uppercase;
     cursor: pointer;
-    .open-menu &{
-        background-color: $secondary-color;
-    }
+   
     &:hover {
         background-color: $secondary-color;
         border: 1px solid $white;
     }
-    .open-menu &:hover{
-        background-color: $primary-color;
-        border: 1px solid $white;
-    }
+   &.lg-btn{
+    min-height: 56px;
     @include bp(xs-max){
-        padding: 10px 15px;
+        min-height: 48px;
+     }
+   }
+   &.bg-btn{
+    padding: 0 40px;
+   }
+    @include bp(xs-max){
+       min-height: 40px;
+       @include bp(xs-max){
+        padding: 0 30px;
+     }
     }
 }
 
@@ -38,7 +46,7 @@
     text-transform: uppercase;
     cursor: pointer;
     min-height: 36px;
-    min-width: 96px;
+   padding: 0 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -50,13 +58,15 @@
 }
 
 .select2-container {
-    width: 100% !important;
     font-size: 16px;
     @include bp(ssm-max){
         width: 100% !important;
     }
     @include bp(xs-max){
         min-width: 180px;
+    }
+    &.select2{
+        width: 100% !important;
     }
 &.select2-container--default{
     .select2-results__option {
@@ -163,12 +173,12 @@
         background: $primary-color;
 
         .ui-datepicker-prev span {
-            background-image: url(../images/prev.png) !important;
+            background-image: url(../images/previous.svg) !important;
             background-position: 0px 0px !important;
             background-size: cover;
         }
         .ui-datepicker-next span {
-            background-image: url(../images/next.png) !important;
+            background-image: url(../images/next.svg) !important;
             background-position: 0px 0px !important;
             background-size: cover;
         }
@@ -178,14 +188,12 @@
         color: rgb(255, 255, 255);
     }
     .ui-datepicker-calendar{
+       
         tr{
-            .ui-datepicker th {
+            th {
                 font-size: 16px;
-                font-weight: 400;
-                color: $heading-color;
+                color: $fonts-color !important;
             }
-        }
-        tr{
             td{
                 .ui-state-default{
                     border: 1px solid $border-color;
@@ -259,6 +267,7 @@
     font-size: 16px;
     font-family: $primary-fonts;
     opacity: 1 !important;
+    width: 20px;
 }
 
 :-moz-placeholder {
@@ -267,4 +276,5 @@
     font-size: 16px;
     font-family: $primary-fonts;
     opacity: 1 !important;
+    width: 20px;
 }
