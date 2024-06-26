@@ -211,16 +211,6 @@ h5 {
 .select2-container {
   font-size: 16px;
 }
-@media (max-width: 850px) {
-  .select2-container {
-    width: 100% !important;
-  }
-}
-@media (max-width: 575px) {
-  .select2-container {
-    min-width: 180px;
-  }
-}
 .select2-container.select2 {
   width: 100% !important;
 }
